@@ -1,0 +1,46 @@
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, scale 0.25s ease, background 0.25s ease;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: var(--accent-text);
+}
+
+.cursor-ring {
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px; /* sempre metade do tamanho, negativo */
+  border: 1px solid color-mix(in srgb, var(--accent-text) 45%, transparent);
+}
+
+.cursor-dot.active,
+.cursor-ring.active {
+  opacity: 0.6;
+}
+
+.cursor-ring.hover {
+  scale: 1.15;
+  background: color-mix(in srgb, var(--accent-text) 30%, transparent);
+  border-color: transparent;
+}
+
+
+
+/* no celular não existe cursor */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}

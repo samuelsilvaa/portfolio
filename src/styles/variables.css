@@ -1,0 +1,37 @@
+/*root variables*/
+
+:root {
+  --font-title: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --font-title: 'Instrument Serif', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-text: 'DM Sans', sans-serif;
+
+  --accent: #c6ff3d;
+  --on-accent: #0a0a0a;
+  --accent-text: #c6ff3d;
+
+  --bg: #0b0e0c;
+  --bg-nav: rgba(20, 24, 21, 0.7);
+  --text: #f4f6f2;
+  --text-muted: #9aa39d;
+  --border: rgba(255, 255, 255, 0.09);
+  --glow: rgba(198, 255, 61, 0.16);
+  --grain: 0.07;
+}
+
+
+/* tema claro */
+[data-theme="light"] {
+
+  --accent-text: #3f6b00;
+
+  --bg: #f1f0ea;
+  --bg-nav: rgba(255, 255, 255, 0.65);
+  --text: #0b0e0c;
+  --text-muted: #5a5f5b;
+  --border: rgba(0, 0, 0, 0.1);
+  --glow: rgba(198, 255, 61, 0.7);
+  --grain: 0.09;
+}
