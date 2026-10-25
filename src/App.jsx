@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero'
 import Cursor from './components/Cursor/Cursor'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
+import Skills from './components/Skills/Skills'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <Cursor/>
       <About/>
       <Projects/>
+      <Skills/>
     </>
   )
 }
