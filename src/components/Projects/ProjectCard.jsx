@@ -1,3 +1,5 @@
+import TypedText from './TypedText'
+
 function ProjectCard({ project, index, total }) {
   const number = String(index + 1).padStart(2, '0')
   const count = String(total).padStart(2, '0')
@@ -5,7 +7,7 @@ function ProjectCard({ project, index, total }) {
 
   return (
     <article className="project-card" aria-live="polite">
-      
+
       <svg className="card-border" aria-hidden="true">
         <rect width="100%" height="100%" rx="6" />
       </svg>
@@ -22,7 +24,9 @@ function ProjectCard({ project, index, total }) {
         </div>
 
         <h3>{project.title}</h3>
-        <p className="project-text">{project.description}</p>
+        <p className="project-text">
+          <TypedText text={project.description} />
+        </p>
 
         {!soon && (
           <>

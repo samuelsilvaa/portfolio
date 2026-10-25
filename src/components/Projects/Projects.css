@@ -369,3 +369,36 @@
     animation: none;
   }
 }
+
+
+.typed {
+  position: relative;
+  display: block;
+}
+
+/* cópia invisível: só reserva a altura do texto completo */
+.typed-ghost {
+  visibility: hidden;
+}
+
+/* o texto digitado fica por cima, na mesma posição */
+.typed-live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.typed-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 3px;
+  vertical-align: -0.2em;
+  background: var(--accent-text);
+  animation: typed-blink 1s steps(1) infinite;
+}
+
+@keyframes typed-blink {
+  50% { opacity: 0; }
+}

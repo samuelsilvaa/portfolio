@@ -22,7 +22,7 @@ const paragrafo = [<>
 function About() {
 
     return (
-            <section class='about' id='sobre'>
+            <section className='about' id='sobre'>
                 <div className='container about-grid'>
                     <div className='about-header'>
                         <Reveal>
