@@ -1,13 +1,16 @@
 /*root variables*/
 
 :root {
+  /* fontes */
   --font-title: 'Instrument Serif', serif;
   --font-body: 'Inter', sans-serif;
 
   --font-title: 'Instrument Serif', serif;
   --font-body: 'Inter', sans-serif;
   --font-text: 'DM Sans', sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
+  /* cores */
   --accent: #c6ff3d;
   --on-accent: #0a0a0a;
   --accent-text: #c6ff3d;

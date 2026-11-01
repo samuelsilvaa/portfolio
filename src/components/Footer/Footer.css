@@ -1,0 +1,271 @@
+/* ---------- Base ---------- */
+.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+/* brilho no topo, igual ao do Hero */
+.footer::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -15%;
+  left: 50%;
+  width: min(900px, 120vw);
+  height: 700px;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, var(--glow), transparent);
+  pointer-events: none;
+}
+
+/* ---------- Topo ---------- */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.footer-square {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  background: var(--accent);
+}
+
+/* ---------- Título ---------- */
+.footer-title {
+  margin: 56px 0 48px;
+  font-size: clamp(3rem, 9vw, 8rem);
+}
+
+/* ---------- Colunas ---------- */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-email {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  color: var(--accent-text);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-text) 60%, transparent);
+}
+
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-btn {
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-text);
+}
+
+.footer-btn--primary {
+  border-color: transparent;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.footer-btn--primary:hover {
+  border-color: transparent;
+}
+
+/* navegação */
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-nav a {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  line-height: 1.15;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--accent-text);
+}
+
+/* informações */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.footer-info a {
+  transition: color 0.2s ease;
+}
+
+.footer-info a:hover {
+  color: var(--accent-text);
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+}
+
+.footer-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-text);
+}
+
+.footer-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: footer-ping 1.8s ease-out infinite;
+}
+
+@keyframes footer-ping {
+  0%   { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* ---------- Faixa de tecnologias ---------- */
+.strip {
+  margin-top: 56px;
+  padding: 12px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.strip-track {
+  display: flex;
+  width: max-content;
+  animation: strip-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.strip-copy {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.strip-sep {
+  padding: 0 1.2em;
+  opacity: 0.5;
+}
+
+@keyframes strip-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---------- Assinatura e rodapé final ---------- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.footer-signature {
+  margin-bottom: -0.16em;
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: clamp(6rem, 24vw, 22rem);
+  line-height: 0.78;
+  letter-spacing: -0.03em;
+  color: var(--accent-text);
+  user-select: none;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-meta a:hover {
+  color: var(--accent-text);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 900px) {
+  .footer-title { margin: 40px 0 36px; }
+
+  .footer-cols {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer-meta {
+    align-items: flex-start;
+    padding-bottom: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strip-track,
+  .footer-dot::after {
+    animation: none;
+  }
+}
