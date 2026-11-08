@@ -1,40 +1,48 @@
-/*root variables*/
-
 :root {
-  /* fontes */
-  --font-title: 'Instrument Serif', serif;
-  --font-body: 'Inter', sans-serif;
-
+  /* ---------- fontes ---------- */
   --font-title: 'Instrument Serif', serif;
   --font-body: 'Inter', sans-serif;
   --font-text: 'DM Sans', sans-serif;
   --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
-  /* cores */
-  --accent: #c6ff3d;
-  --on-accent: #0a0a0a;
-  --accent-text: #c6ff3d;
+  /* ---------- cores ---------- */
+  --bg: #070d1b;
+  --bg-gradient: linear-gradient(180deg, #0b1630 0%, #070d1b 45%, #050914 100%);
+  --bg-nav: rgba(14, 24, 46, 0.75);
 
-  --bg: #0b0e0c;
-  --bg-nav: rgba(20, 24, 21, 0.7);
-  --text: #f4f6f2;
-  --text-muted: #9aa39d;
-  --border: rgba(255, 255, 255, 0.09);
-  --glow: rgba(198, 255, 61, 0.16);
-  --grain: 0.07;
+  --nav-metal: linear-gradient(180deg, rgba(90, 120, 190, 0.26) 0%, rgba(24, 38, 76, 0.4) 100%);
+  --nav-highlight: rgba(255, 255, 255, 0.22);
+
+  --text: #eef2fb;
+  --text-muted: #9aa8c4;
+  --border: rgba(160, 190, 255, 0.14);
+
+  --accent: #2f5fd0;
+  --accent-gradient: linear-gradient(135deg, #3f6fe0, #2a55bb 55%, #1c3d92);
+  --accent-edge: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  --on-accent: #ffffff;
+  --accent-text: #7aa2ff;
+  --metal-text: linear-gradient(180deg, #cfe0ff 0%, #6f9bff 45%, #2a55bb 100%);
+
+  --glow: rgba(74, 124, 232, 0.3);
+  --grain: 0.06;
 }
 
-
-/* tema claro */
 [data-theme="light"] {
+  --bg: #eef3fa;
+  --bg-gradient: linear-gradient(180deg, #f5f8fd 0%, #e8eff8 55%, #dae6f4 100%);
+  --bg-nav: rgba(244, 248, 253, 0.75);
 
-  --accent-text: #3f6b00;
+ --nav-metal: linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(214, 228, 244, 0.5) 100%);
+  --nav-highlight: rgba(255, 255, 255, 0.95);
 
-  --bg: #f1f0ea;
-  --bg-nav: rgba(255, 255, 255, 0.65);
-  --text: #0b0e0c;
-  --text-muted: #5a5f5b;
-  --border: rgba(0, 0, 0, 0.1);
-  --glow: rgba(198, 255, 61, 0.7);
-  --grain: 0.09;
+  --text: #0b1424;
+  --text-muted: #51607a;
+  --border: rgba(20, 50, 100, 0.14);
+
+  --accent-text: #1c46b8;
+  --metal-text: linear-gradient(180deg, #5b8cf0 0%, #2a55bb 50%, #12296b 100%);
+
+  --glow: rgba(120, 170, 240, 0.38);
+  --grain: 0.08;
 }

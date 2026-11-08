@@ -44,7 +44,7 @@ function Hero() {
                 {/* descrição */}
                 <Reveal delay={1000}>
                     <p className='hero-text'>
-                        <strong>Desenvolvedor Front-End.</strong> Transformando ideias em interfaces funcionais, organizadas
+                        <strong>Desenvolvedor Web.</strong> Transformando ideias em interfaces funcionais, organizadas
                         e sempre com vontade de aprender.
                     </p>
                 </Reveal>

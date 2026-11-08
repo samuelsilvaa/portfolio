@@ -1,6 +1,10 @@
-body {
-  font-family: var(--font-body);
+html {
   background: var(--bg);
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: var(--font-body);
   color: var(--text);
 }
 
